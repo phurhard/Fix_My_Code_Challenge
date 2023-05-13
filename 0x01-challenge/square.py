@@ -10,6 +10,17 @@ class square():
         for key, value in kwargs.items():
             setattr(self, key, value)
 
+    def validate(self, name, value):
+        """ Validation of the input values to the rectangle class"""
+        if type(value) != int:
+            raise TypeError(f'{name} must be an integer')
+        if name in ['width', 'height']:
+            if value <= 0:
+                raise ValueError(f'{name} must be > 0')
+            else:
+                return value
+
+
     def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.height
