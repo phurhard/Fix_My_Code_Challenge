@@ -21,7 +21,7 @@ class square():
 
     def __str__(self):
         """ String represetation"""
-        return "{}/{}".format(self.width, self.height)
+        return f"{self.width}/{self.height}"
 
 if __name__ == "__main__":
     """ Creatig a square instance"""
